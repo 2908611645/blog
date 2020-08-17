@@ -13,6 +13,10 @@ import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
+import org.springframework.data.elasticsearch.core.SearchHit;
+import org.springframework.data.elasticsearch.core.SearchHits;
+import org.springframework.data.elasticsearch.core.query.Query;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -37,6 +41,10 @@ public class ArticleEsController {
     private ArticleRepository articleRepository;
 
     @Resource
+    private  ElasticsearchRestTemplate elasticsearchRestTemplate;
+
+
+    @Resource
     private ArticleService articleService;
 
 
@@ -49,12 +57,12 @@ public class ArticleEsController {
     public Result search(@RequestParam("keywords") String keywords){
         // 对所有索引进行搜索
         QueryBuilder queryBuilder = QueryBuilders.queryStringQuery(keywords);
-
         Iterable<Article> listIt =  articleRepository.search(queryBuilder);
+//        SearchHits<Article> searchHits = elasticsearchRestTemplate.search((Query) queryBuilder, Article.class);
 
         //Iterable转list
         List<Article> articleList= Lists.newArrayList(listIt);
-
+        //List<SearchHit<Article>> articleList=searchHits.toList();
         return Result.ok().put("articleList",articleList);
     }
 

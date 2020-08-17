@@ -31,7 +31,6 @@ public class BaseEntity {
      * 创建时间
      */
     @ApiModelProperty(value = "创建时间")
-    @Field(type = FieldType.Date, format = DateFormat.none)
     @TableField(fill = FieldFill.INSERT)
     private Date createTime;
 
@@ -39,7 +38,6 @@ public class BaseEntity {
      * 更新时间
      */
     @ApiModelProperty(value = "更新时间")
-    @Field(type = FieldType.Date, format = DateFormat.none)
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
 }
