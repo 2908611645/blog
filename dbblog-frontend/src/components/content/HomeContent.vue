@@ -1,7 +1,16 @@
 <template>
   <div class="home-content">
-    <iv-row>
-      <iv-col :xs="24" :sm="24" :md="24" :lg="17" :xl="17">
+    <iv-row :gutter="16">
+      <iv-col :xs="0" :sm="0" :md="0" :lg="4">
+        <div class="layout-right">
+          <about></about>
+          <recommend></recommend>
+          <hot-read></hot-read>
+          <friend-links style="margin-top:15px;"></friend-links>
+          <tag-wall style="margin-top: 15px;"></tag-wall>
+        </div>
+      </iv-col>
+      <iv-col :xs="24" :sm="24" :md="24" :lg="10" :xl="13">
         <div class="layout-left">
           <section-title :mainTitle="'文章'" :subTitle="'Articles'" :tipText="'View More'" :tipHref="'/articles'">
             <title-menu-filter @filterByMenu="refreshArticle"  slot="menu" :menu-filter-list="defaultFilterList"></title-menu-filter>
@@ -17,7 +26,7 @@
           <book-note-list-cell v-for="bookNote in bookNoteList" :bookNote="bookNote" :key="bookNote.title"></book-note-list-cell>
         </div>
       </iv-col>
-      <iv-col :xs="0" :sm="0" :md="0" :lg="7">
+       <iv-col :xs="0" :sm="0" :md="0" :lg="6">
         <div class="layout-right">
           <about></about>
           <recommend></recommend>
@@ -143,6 +152,7 @@ export default {
       width 1200px
       margin 15px auto 0
       .layout-left, .layout-right
+        background rgba(200,200,200,0.7)
         padding 0
         @media only screen and (max-width: 768px)
           padding 0

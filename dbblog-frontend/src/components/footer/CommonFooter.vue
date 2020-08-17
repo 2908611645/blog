@@ -31,9 +31,7 @@ export default {
     line-height 25px
     text-align center
     margin 15px 0
-    color $default-title-color
     border-top 1px solid $default-border-color
-    background $default-background-color
     @media only screen and (max-width: $responsive-sm)
       font-size 13px
     @media screen and (min-width: $responsive-sm)

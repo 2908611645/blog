@@ -89,11 +89,18 @@ i.rotating-clockwise
 $header-height = 40px
 
 body.docs
+  background: url(./../../../assets/bg.png)
+  background-size cover
+  background-position: center 0
+  background-repeat: no-repeat
+  background-attachment:fixed 
+  background-size: cover
+  -webkit-background-size: cover   /* 兼容Webkit内核浏览器如Chrome和Safari */ 
+  -o-background-size: cover  /* 兼容Opera */ 
   font-family: $body-font
   font-size: $body-font-size
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
-  background-color: white
   margin: 0
   padding-top: $header-height
   @media screen and (min-width: 992px)
@@ -264,7 +271,17 @@ body.docs
     margin-left: 290px
 
 @media screen and (max-width: 992px)
+  body.docs
+
   body
+    background: url(./../../../assets/phonewallpaper.jpg)
+    background-size cover
+    background-position: center 0
+    background-repeat: no-repeat
+    background-attachment:fixed 
+    background-size: cover
+    -webkit-background-size: cover   /* 兼容Webkit内核浏览器如Chrome和Safari */ 
+    -o-background-size: cover  /* 兼容Opera */
     -webkit-text-size-adjust: none
     font-size: 14px
   #header

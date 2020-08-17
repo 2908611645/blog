@@ -127,6 +127,7 @@ export default {
       width 1200px
       margin 15px auto 0
     .layout-left, .layout-right
+      background rgba(200,200,200,0.7)
       padding 0
       @media only screen and (max-width: 768px)
         padding 0

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import router from '@/router'
 import store from '@/store'
-import 'iview/dist/styles/iview.css'
+import 'view-design/dist/styles/iview.css'
 import '@/common/stylus/index.styl'
 import App from './App.vue'
 import httpRequest from '@/utils/httpRequest'
@@ -18,8 +18,9 @@ import {
   Rate,
   Modal,
   Message,
-  Notice
-} from 'iview'
+  Notice,
+  Tooltip
+} from 'view-design'
 
 Vue.component('iv-row', Row)
 Vue.component('iv-col', Col)
@@ -29,6 +30,7 @@ Vue.component('iv-tag', Tag)
 Vue.component('iv-icon', Icon)
 Vue.component('iv-affix', Affix)
 Vue.component('iv-rate', Rate)
+Vue.component('iv-tooltip', Tooltip)
 
 Vue.prototype.$http = httpRequest // Ajax 请求方法
 Vue.prototype.$Modal = Modal

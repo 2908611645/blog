@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import {LoadingBar} from 'iview'
+import {LoadingBar} from 'view-design'
 import Index from '@/components/index/Index'
 
 // 公共区域
@@ -17,6 +17,9 @@ import ArticleListContent from '@/components/content/ArticleListContent'
 import BookListContent from '@/components/content/BookListContent'
 import TimeLineContent from '@/components/content/TimeLineContent'
 import SearchResultContent from '@/components/content/SearchResultContent'
+
+// bilibili
+import HomeBiliBili from '@/components/content/bilibili'
 
 Vue.use(Router)
 
@@ -138,6 +141,18 @@ let router = new Router({
           },
           meta: {
             title: '时间轴 | Bobbi的个人博客 | 一个努力成长中的Java后端程序猿'
+          }
+        },
+        {
+          path: 'bilibili',
+          name: 'bilibili',
+          components: {
+            header: SimpleHeader,
+            content: HomeBiliBili,
+            footer: CommonFooter
+          },
+          meta: {
+            title: '我的追番'
           }
         }
       ]

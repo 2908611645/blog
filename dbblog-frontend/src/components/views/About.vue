@@ -2,11 +2,14 @@
   <div class="about">
     <img class="background" src="../../assets/background.jpg" alt="">
     <img class="avatar" src="../../assets/avatar.jpg" alt="">
-    <p class="name">Bobbi</p>
-    <p class="desc">Write the code, Change the World</p>
-    <ul class="social">
-      <li><a href="https://github.com/llldddbbb" target="_blank"><img src="../../assets/icon/GitHub.png" alt=""></a></li>
-    </ul>
+    <p class="name">Akari</p>
+    <p class="desc">Akaza Akari</p>
+       <iv-tooltip content="github" placement="top">
+          <a href="https://github.com/2908611645" target="_blank"><img src="../../assets/icon/GitHub.png" alt="" class="xx"></a>
+       </iv-tooltip>
+       <iv-tooltip content="收藏番剧" placement="top">
+          <a href="bilibili" target="_blank"><img src="../../assets/icon/Bilibili.png" alt="" class="xx"></a>
+       </iv-tooltip>
     <div class="line"></div>
     <h4>技能值</h4>
     <div class="progresses">
@@ -15,7 +18,7 @@
           <p class="title">Java</p>
         </iv-col>
         <iv-col :span="18">
-          <iv-progress status="normal" :hide-info="true" :stroke-width="8" :percent="60" class="bar"></iv-progress>
+          <iv-progress status="normal" :hide-info="true" :stroke-width="8" :percent="1" class="bar"></iv-progress>
         </iv-col>
       </iv-row>
       <iv-row :gutter="20">
@@ -23,15 +26,15 @@
           <p class="title">Vue</p>
         </iv-col>
         <iv-col :span="18">
-          <iv-progress status="wrong" :hide-info="true" :stroke-width="8" :percent="40" class="bar"></iv-progress>
+          <iv-progress status="wrong" :hide-info="true" :stroke-width="8" :percent="1" class="bar"></iv-progress>
         </iv-col>
       </iv-row>
       <iv-row :gutter="20">
         <iv-col :span="6">
-          <p class="title">Go</p>
+          <p class="title">C#</p>
         </iv-col>
         <iv-col :span="18">
-          <iv-progress status="success" :hide-info="true" :stroke-width="8" :percent="10" class="bar"></iv-progress>
+          <iv-progress status="success" :hide-info="true" :stroke-width="8" :percent="1" class="bar"></iv-progress>
         </iv-col>
       </iv-row>
       <iv-row :gutter="20">
@@ -39,7 +42,7 @@
           <p class="title">Cloud</p>
         </iv-col>
         <iv-col :span="18">
-          <iv-progress status="active" :hide-info="true" :stroke-width="8" :percent="30" class="bar"></iv-progress>
+          <iv-progress status="active" :hide-info="true" :stroke-width="8" :percent="1" class="bar"></iv-progress>
         </iv-col>
       </iv-row>
     </div>
@@ -90,7 +93,8 @@ export default {
       text-align center
       padding 0 20px
       margin-top 15px
-      > li
+      > .xx
+        clear left
         padding 8px
         a
           display block
@@ -99,6 +103,10 @@ export default {
           margin: auto
           img
             width 100%
+    .xx
+      width: 44px
+      height: 44px
+      margin 10px
     .line
       height 1px
       background-color $color-gradually-gray-91
